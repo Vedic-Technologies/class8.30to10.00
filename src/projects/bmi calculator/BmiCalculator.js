@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import './bmicalculator.css'
 const BmiCalculator = () => {
   
     const [weight, setWeight] = useState(0)
@@ -8,7 +8,7 @@ const BmiCalculator = () => {
     const [message, setMessage] = useState('')
    
     let calcBmi = (event) => {
-      //prevent submitting to the server
+    
       event.preventDefault()
    
       if (weight === 0 || height === 0) {
