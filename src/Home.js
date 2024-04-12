@@ -5,7 +5,7 @@ const Home = () => {
     const projects = [
         {
           id: 1,
-          title: "E-commerce Website",
+          title: "Calculator",
           image: "https://www.codewithfaraz.com/img/calculator.png",
           detail: "A fully functional e-commerce website built with React and Node.js.",
           languagesUsed: ["HTML", "CSS", "JavaScript", "React", "Node.js"],
@@ -13,11 +13,19 @@ const Home = () => {
         },
         {
           id: 2,
-          title: "Blog App",
+          title: "Bmi Calculator",
           image: "https://media.licdn.com/dms/image/D4D12AQHWPdY9noLMYA/article-cover_image-shrink_720_1280/0/1700389480737?e=2147483647&v=beta&t=ouROI_aHlq--fo4w7JE6jrvmdv3zNEspcyp7O-ssjRg",
           detail: "A blog application where users can create, read, update, and delete blog posts.",
           languagesUsed: ["HTML", "CSS", "JavaScript", "React", "Node.js", "Express", "MongoDB"],
           url:"/bmicalculator"
+        },
+        {
+          id: 3,
+          title: "Todo Application",
+          image: "https://www.freecodecamp.org/news/content/images/size/w2000/2020/07/cover-1.png",
+          detail: "A Todo application where users can create, read, update, and delete todoes.",
+          languagesUsed: ["HTML", "CSS", "JavaScript", "React", "Node.js", "Express", "MongoDB"],
+          url:"/todo"
         },
         // Add more projects as needed
       ];
