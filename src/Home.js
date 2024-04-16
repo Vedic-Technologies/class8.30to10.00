@@ -27,6 +27,15 @@ const Home = () => {
           languagesUsed: ["HTML", "CSS", "JavaScript", "React", "Node.js", "Express", "MongoDB"],
           url:"/todo"
         },
+
+        {
+          id: 3,
+          title: "ShowPasswordIcon Application",
+          image: "https://www.csestack.org/wp-content/uploads/2021/02/password-show-hide-for-login-form.png",
+          detail: "A ShowPasswordIcon application where users can see password by clicking  show password icon",
+          languagesUsed: ["HTML", "CSS", "JavaScript", "React", "Node.js", "Express", "MongoDB"],
+          url:"/show_password_icon"
+        },
         // Add more projects as needed
       ];
 
@@ -39,7 +48,7 @@ const Home = () => {
     <div className="py-5 px-10 text-5xl bg-blue-900 text-white rounded-full center w-fit m-[40%]">Class Projects</div>
     </div>
     
-    <div className='flex gap-20 m-32'>
+    <div className='flex gap-20 m-32 flex-wrap'>
        
         {
       projects.map((project) => (

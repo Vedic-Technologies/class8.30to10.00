@@ -6,7 +6,7 @@ const TodoNavbar = () => {
     <div>
       <div className="text-5xl mt-5 text-blue-700 ">Todo Application</div>
 
-<div className="mt-3 w-[80%] h-[450px] m-auto  ">
+<div className="mt-3 w-[80%]  m-auto  ">
 
   <div className=" text-[20px] font-semibold flex py-2 px-auto items-center shadow-xl rounded-full justify-around border-2 border-gray-300">
   

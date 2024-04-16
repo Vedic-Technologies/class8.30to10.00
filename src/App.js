@@ -4,6 +4,7 @@ import BmiCalculator from './projects/bmi calculator/BmiCalculator';
 import {Routes, Route} from 'react-router-dom'
 import Home from './Home';
 import TodoApp from './projects/todo/TodoApp';
+import ShowPasswordIcon from './projects/show_password_icon/ShowPasswordIcon';
 
 function App() {
   return (
@@ -14,6 +15,8 @@ function App() {
         <Route path="/calculator" element={<BmiCalculator />} />   
         <Route path="/bmicalculator" element={<BmiCalculator />} />        
         <Route path="/todo/*" element={<TodoApp />} />
+        <Route path="/show_password_icon" element={<ShowPasswordIcon />} />
+
       
       </Routes>
    
