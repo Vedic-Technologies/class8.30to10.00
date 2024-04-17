@@ -3,7 +3,11 @@ const flowbite = require("flowbite-react/tailwind");
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}", flowbite.content(),],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'calculator': "url('https://www.codewithfaraz.com/img/calculator.png')",
+      }
+    },
   },
   plugins: [flowbite.plugin(),],
 }

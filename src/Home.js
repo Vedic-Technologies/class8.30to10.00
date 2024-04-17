@@ -36,6 +36,14 @@ const Home = () => {
           languagesUsed: ["HTML", "CSS", "JavaScript", "React", "Node.js", "Express", "MongoDB"],
           url:"/show_password_icon"
         },
+        {
+          id: 4,
+          title: "Small Todo Application",
+          image: "https://foolishdeveloper.com/wp-content/uploads/2021/11/todo-list-javascript.jpg",
+          detail: "A small todo app where user can add and delete todo from todo application",
+          languagesUsed: ["HTML", "CSS", "React"],
+          url:"/small_todo_app"
+        },
         // Add more projects as needed
       ];
 
@@ -44,32 +52,39 @@ const Home = () => {
 
   return (
     <>
-    <div className="w-screen center">
-    <div className="py-5 px-10 text-5xl bg-blue-900 text-white rounded-full center w-fit m-[40%]">Class Projects</div>
-    </div>
     
-    <div className='flex gap-20 m-32 flex-wrap'>
-       
-        {
-      projects.map((project) => (
-     <Link to={project.url}>
-     <div key={project.id} className="cursor-pointer border-2 border-gray-400  max-w-sm rounded overflow-hidden shadow-lg">
-          <img className="w-full" src={project.image} alt={project.title} />
-          <div className="px-6 py-4">
-            <div className="font-bold text-xl mb-2">{project.title}</div>
-            <p className="text-gray-700 text-base">{project.detail}</p>
-            <div className="mt-4">
-              <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                {project.languagesUsed.map((language) => (
-                  <span key={language}>{language}</span>
-                ))}
+    
+    <div className='flex  w-screen'>
+    <div className=" flex w-[80%] mx-auto mt-10 gap-10  flex-wrap justify-center lg:flex-col xl:flex-row">
+      {
+  projects.map((project) => (
+    
+    <Link to={project.url} key={project.id} className=' xl:w-[45%] lg:w-full w-full'>
+      <div className="flex flex-col cursor-pointer border-2 border-gray-400 lg:h-[250px] h-[500px] rounded shadow-lg lg:flex-row md:flex-col  ">       
+        <div className="flex-1 bg-cover m-3 border-2 rounded-lg" style={{ backgroundImage: `url(${project.image})` }}></div>
+        <div className="flex-1 px-6 py-4">
+          <div className="font-bold text-xl mb-2">{project.title}</div>
+          <p className="text-gray-700 text-base">{project.detail}</p>
+          <div className="mt-4">
+            {project.languagesUsed.map((language) => (
+              <span
+                key={language}
+                className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+              >
+                {language}
               </span>
-            </div>
+            ))}
           </div>
         </div>
-        </Link>
-      ))
-    }
+      </div>
+    </Link>
+  ))
+}
+</div>
+
+
+
+
     </div>
     </>
   )
