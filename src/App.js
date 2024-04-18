@@ -7,11 +7,16 @@ import TodoApp from "./projects/todo/TodoApp";
 import ShowPasswordIcon from "./projects/show_password_icon/ShowPasswordIcon";
 import Navbar from "./components/Navbar";
 import SmallTodoApp from "./projects/small_todo_project/SmallTodoApp";
+import ResponsiveNavbar from "./projects/small/responsive_navbar/ResponsiveNavbar";
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
+      {/* <Navbar /> */}
+
+      <div className="size-72 m-10 bg-red-500  md:bg-green-500 lg:bg-black">sdfsfsdfsf</div>
+
+
 
       <Routes>
         <Route path="/" element={<Home />} />
@@ -20,6 +25,7 @@ function App() {
         <Route path="/todo/*" element={<TodoApp />} />
         <Route path="/show_password_icon" element={<ShowPasswordIcon />} />
         <Route path="/small_todo_app" element={<SmallTodoApp />} />
+        <Route path="/responsive_navbar" element={<ResponsiveNavbar />} />
 
       </Routes>
     </div>
