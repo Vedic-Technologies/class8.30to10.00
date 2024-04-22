@@ -17,6 +17,7 @@ const Navbar = () => {
               <a href="#" className="text-gray-700 hover:bg-gray-800 hover:text-white px-3 py-2 rounded-md  font-medium">Easy Projects</a>
               <a href="#" className="text-gray-700 hover:bg-gray-800 hover:text-white px-3 py-2 rounded-md  font-medium">Intermediate Projects</a>
               <a href="#" className="text-gray-700 hover:bg-gray-800 hover:text-white px-3 py-2 rounded-md  font-medium">Large Projects</a>
+              <a href="/students_projects" className="text-gray-700 hover:bg-gray-800 hover:text-white px-3 py-2 rounded-md  font-medium">Student's Projects</a>
             </div>
           </div>
           <div className="-mr-2 flex md:hidden">

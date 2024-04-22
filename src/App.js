@@ -8,15 +8,12 @@ import ShowPasswordIcon from "./projects/show_password_icon/ShowPasswordIcon";
 import Navbar from "./components/Navbar";
 import SmallTodoApp from "./projects/small_todo_project/SmallTodoApp";
 import ResponsiveNavbar from "./projects/small/responsive_navbar/ResponsiveNavbar";
+import StudentsProject from "./Pages/StudentsProject";
 
 function App() {
   return (
     <div className="App">
-      {/* <Navbar /> */}
-
-      <div className="size-72 m-10 bg-red-500  md:bg-green-500 lg:bg-black">sdfsfsdfsf</div>
-
-
+      <Navbar />
 
       <Routes>
         <Route path="/" element={<Home />} />
@@ -26,6 +23,7 @@ function App() {
         <Route path="/show_password_icon" element={<ShowPasswordIcon />} />
         <Route path="/small_todo_app" element={<SmallTodoApp />} />
         <Route path="/responsive_navbar" element={<ResponsiveNavbar />} />
+        <Route path="/students_projects" element={<StudentsProject />} />
 
       </Routes>
     </div>
