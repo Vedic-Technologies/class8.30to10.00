@@ -1,11 +1,13 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 
-const StudentCard = ({ student }) => {
+const StudentCard = ({ student, delay }) => {
   return (
     <motion.div 
-      className=" h-[550px] p-3 max-w-md rounded overflow-hidden shadow-lg  my-4 border-2  bg-white"
-      whileHover={{ scale: 1.05 }}      
+      className="h-[550px] p-3 max-w-md rounded overflow-hidden shadow-lg my-4 border-2 bg-white"
+      initial={{ x: -1000 }}
+      animate={{ x: 0 }}
+      transition={{ delay: delay, type: 'spring', stiffness: 120 }}
+      whileHover={{ scale: 1.05 }}
     >
       <img className="w-full rounded" src={student.studentPicture} alt={student.studentName} />
       <div className="px-6 py-4">

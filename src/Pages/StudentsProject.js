@@ -6,7 +6,7 @@ const StudentsProject = () => {
 
   return (
     <div className='center gap-10 mt-40 w-3/5 m-auto '>
-        {students.map((student) => <StudentCard student={student}/>)}
+        {students.map((student,index) => <StudentCard student={student} delay={index * 0.1}/>)}
     </div>
   )
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import { motion } from 'framer-motion';
 const Home = () => {
   const projects = [
     {
@@ -9,7 +9,7 @@ const Home = () => {
       image: "https://www.codewithfaraz.com/img/calculator.png",
       detail:
         "A fully functional e-commerce website built with React and Node.js.",
-      languagesUsed: ["HTML", "CSS", "JavaScript", "React", "Node.js"],
+      languagesUsed: ["HTML", "CSS", "JavaScript", "React"],
       url: "/calculator",
     },
     {
@@ -22,11 +22,9 @@ const Home = () => {
       languagesUsed: [
         "HTML",
         "CSS",
-        "JavaScript",
+       
         "React",
-        "Node.js",
-        "Express",
-        "MongoDB",
+       
       ],
       url: "/bmicalculator",
     },
@@ -39,12 +37,8 @@ const Home = () => {
         "A Todo application where users can create, read, update, and delete todoes.",
       languagesUsed: [
         "HTML",
-        "CSS",
-        "JavaScript",
-        "React",
-        "Node.js",
-        "Express",
-        "MongoDB",
+        "CSS",       
+        "React",        
       ],
       url: "/todo",
     },
@@ -59,11 +53,9 @@ const Home = () => {
       languagesUsed: [
         "HTML",
         "CSS",
-        "JavaScript",
+       
         "React",
-        "Node.js",
-        "Express",
-        "MongoDB",
+       
       ],
       url: "/show_password_icon",
     },
@@ -110,41 +102,46 @@ const Home = () => {
 
   return (
     <>
-      <div className="flex  w-screen pt-20 -z-20 pb-20">
-        <div className=" flex w-[80%] mx-auto mt-10 gap-10  flex-wrap justify-center lg:flex-col xl:flex-row">
-          {projects.map((project, index) => (
-            <Link
-              to={project.url}
-              key={project.id}
-              className=" xl:w-[45%] lg:w-full w-full relative overflow-hidden"
-            >
-              <div className="flex flex-col cursor-pointer border-2 border-gray-400 lg:h-[250px] h-[500px] rounded shadow-lg lg:flex-row md:flex-col  ">
-                <div
-                  className="flex-1 bg-cover m-3 border-2 rounded-lg"
-                  style={{ backgroundImage: `url(${project.image})` }}
-                ></div>
-                <div className="flex-1 px-6 py-4">
-                  <div className="font-bold text-xl mb-2">{project.title}</div>
-                  <p className="text-gray-700 text-base">{project.detail}</p>
-                  <div className="mt-4">
-                    {project.languagesUsed.map((language) => (
-                      <span
-                        key={language}
-                        className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-                      >
-                        {language}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-                <div className="absolute -right-10 -top-10 size-20 bg-red-700 text-2xl rounded-full flex justify-start items-center text-white shadow-md">
-                  <span className="ml-4 mt-7">{index + 1}</span>
-                </div>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </div>
+    <div className="flex w-screen pt-20 -z-20 pb-20">
+  <div className="flex w-[80%] mx-auto mt-10 gap-10 flex-wrap justify-center lg:flex-col xl:flex-row">
+    {projects.map((project, index) => (
+      <Link
+        to={project.url}
+        key={project.id}
+        className="xl:w-[45%] lg:w-full w-full relative overflow-hidden"
+      >
+        <motion.div
+          initial={{ opacity: 0, y: 150 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: index * 0.2 }}
+          className="flex flex-col cursor-pointer border-2 border-gray-400 lg:h-[250px] h-[500px] rounded shadow-lg lg:flex-row md:flex-col"
+        >
+          <div
+            className="flex-1 bg-cover m-3 border-2 rounded-lg"
+            style={{ backgroundImage: `url(${project.image})` }}
+          ></div>
+          <div className="flex-1 px-6 py-4">
+            <div className="font-bold text-xl mb-2">{project.title}</div>
+            <p className="text-gray-700 text-base">{project.detail}</p>
+            <div className="mt-4">
+              {project.languagesUsed.map((language) => (
+                <span
+                  key={language}
+                  className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+                >
+                  {language}
+                </span>
+              ))}
+            </div>
+          </div>
+          <div className="absolute -right-10 -top-10 size-20 bg-red-700 text-2xl rounded-full flex justify-start items-center text-white shadow-md">
+            <span className="ml-4 mt-7">{index + 1}</span>
+          </div>
+        </motion.div>
+      </Link>
+    ))}
+  </div>
+</div>
     </>
   );
 };
