@@ -16,6 +16,7 @@
 }
  
 .container {
+  width: 400px;
   box-shadow: 0px 0px 12px #ccc;
   border-radius: 8px;
   padding: 3rem;
