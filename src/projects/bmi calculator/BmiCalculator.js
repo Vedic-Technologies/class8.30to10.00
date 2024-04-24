@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import './bmicalculator.css'
 const BmiCalculator = () => {
   
-    const [weight, setWeight] = useState(0)
-    const [height, setHeight] = useState(0)
+    const [weight, setWeight] = useState()
+    const [height, setHeight] = useState()
     const [bmi, setBmi] = useState('')
     const [message, setMessage] = useState('')
    
@@ -42,12 +42,12 @@ const BmiCalculator = () => {
    
           <div>
             <label>Weight (lbs)</label>
-            <input value={weight} onChange={(e) => setWeight(e.target.value)} />
+            <input value={weight} onChange={(e) => setWeight(e.target.value)} className='border-2 rounded-xl px-3 border-gray-400'/>
           </div>
    
           <div>
             <label>Height (in)</label>
-            <input value={height} onChange={(event) => setHeight(event.target.value)} />
+            <input value={height} onChange={(event) => setHeight(event.target.value)} className='border-2 rounded-xl px-3 border-gray-400' />
           </div>
    
           <div>
