@@ -9,23 +9,38 @@ import Navbar from "./components/Navbar";
 import SmallTodoApp from "./projects/small_todo_project/SmallTodoApp";
 import ResponsiveNavbar from "./projects/small/responsive_navbar/ResponsiveNavbar";
 import StudentsProject from "./Pages/StudentsProject";
+import SideBar from "./components/SideBar";
+import MainContent from "./Pages/MainContent";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
 
-      <Routes>
-        <Route path="/" element={<Home />} />
+     
+      <div className="flex h-screen">
+        <SideBar />
+        <MainContent>
+        <Routes>
+            <Route path="/" element={BmiCalculator} />
+            <Route path="/todo" element={<TodoApp/>} />
+            {/* Add more routes as needed */}
+         </Routes>
+        </MainContent>
+      </div>
+
+
+
+        {/* <Route path="/" element={<Home />} />
         <Route path="/calculator" element={<BmiCalculator />} />
         <Route path="/bmicalculator" element={<BmiCalculator />} />
         <Route path="/todo/*" element={<TodoApp />} />
         <Route path="/show_password_icon" element={<ShowPasswordIcon />} />
         <Route path="/small_todo_app" element={<SmallTodoApp />} />
         <Route path="/responsive_navbar" element={<ResponsiveNavbar />} />
-        <Route path="/students_projects" element={<StudentsProject />} />
+        <Route path="/students_projects" element={<StudentsProject />} /> */}
 
-      </Routes>
+     
     </div>
   );
 }

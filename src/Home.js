@@ -86,17 +86,18 @@ const Home = () => {
   return (
     <>
       <Navbar setFilteredLevel={setFilteredLevel} />
-      <div className="flex w-screen pt-20 -z-20 pb-20">
-        <div className="flex w-[80%] mx-auto mt-10 gap-10 flex-wrap justify-center lg:flex-col xl:flex-row">
+    <div className="mt-32 text-5xl font-bold bg-blue-700 w-fit text-white rounded-lg py-5 px-20 ml-10">All Projects</div>  
+      <div className="flex w-3/5 m-auto pt-20 -z-20 pb-20 ">
+        <div className="flex w-full mx-auto mt-0 gap-10 flex-wrap justify-center flex-col m-auto ">
           {filteredProjects.map((project, index) => (
-            <Link to={project.url} key={project.id} className="xl:w-[45%] lg:w-full w-full relative overflow-hidden">
+            <Link to={project.url} key={project.id} className="xl:w-full lg:w-full w-full relative overflow-hidden h-[500px] rounded-2xl shadow-vedic-shadow">
               <motion.div
                 initial={{ opacity: 0, y: 150 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.2 }}
-                className="flex flex-col cursor-pointer border-2 border-gray-400 lg:h-[250px] h-[500px] rounded shadow-lg lg:flex-row md:flex-col"
+                className="flex flex-col cursor-pointer border border-gray-400 lg:h-full h-full rounded-2xl  lg:flex-row md:flex-col"
               >
-                <div className="flex-1 bg-cover m-3 border-2 rounded-lg" style={{ backgroundImage: `url(${project.image})` }}></div>
+                <div className="flex-1 bg-cover m-3 border-2 rounded-xl" style={{ backgroundImage: `url(${project.image})` }}></div>
                 <div className="flex-1 px-6 py-4">
                   <div className="font-bold text-xl mb-2">{project.title}</div>
                   <p className="text-gray-700 text-base">{project.detail}</p>
