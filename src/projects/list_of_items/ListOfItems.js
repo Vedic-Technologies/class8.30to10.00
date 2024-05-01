@@ -14,7 +14,7 @@ const ListOfItems = () => {
           <div
 
          
-            className={`w-full border-2 p-5  text-left rounded-lg   ${selected === list.id ?'bg-red-800 text-white':'bg-white hover:bg-red-300'} `}
+            className={`w-full border-2 p-5  text-left rounded-lg select-none  ${selected === list.id ?'bg-red-800 text-white':'bg-white hover:bg-red-300'} `}
             key={list.id}
           >
             <div className={`text-lg w-full cursor-pointer`}
