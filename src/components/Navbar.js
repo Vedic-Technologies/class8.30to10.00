@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logoes/vedic logo.png";
-
+import { motion } from 'framer-motion';
+import AnimateCharacter from "./AnimateCharacter";
 const Navbar = ({ setFilteredLevel }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [active, setActive] = useState("default");
@@ -10,6 +11,8 @@ const Navbar = ({ setFilteredLevel }) => {
     setActive(level);
     setFilteredLevel(level);
   };
+
+  const characters = ['P', 'r', 'o', 'j', 'e', 'c', 't', 's'];
 
   return (
     <nav className="shadow-lg h-20 fixed top-0 right-0 left-0 z-10 bg-white">
@@ -22,44 +25,12 @@ const Navbar = ({ setFilteredLevel }) => {
           </div>
           <div className="hidden md:block ">
             <div className="ml-10 mt-4 flex items-baseline space-x-4">
-              <a
-                href="/"
-                onClick={() => handleFilterChange("default")}
-                className={` ${active === "default" && "bg-gray-800 text-white "}   
-                  text-gray-700  hover:bg-gray-800 hover:text-white px-3 py-2 rounded-md  font-medium`}
-              >
-                Home
-              </a>
-              <a
-                href="#"
-                onClick={() => handleFilterChange("easy")}
-                className={` ${active === "easy" && "bg-gray-800 text-white "}
-                  text-gray-700  hover:bg-gray-800 hover:text-white px-3 py-2 rounded-md  font-medium`}
-              >
-                Easy Projects
-              </a>
-              <a
-                href="#"
-                onClick={() => handleFilterChange("medium")}
-                className={` ${active === "medium" && "bg-gray-800 text-white "}
-                  text-gray-700  hover:bg-gray-800 hover:text-white px-3 py-2 rounded-md  font-medium`}
-              >
-                Intermediate Projects
-              </a>
-              <a
-                href="#"
-                onClick={() => handleFilterChange("hard")}
-                className={` ${active === "hard" && "bg-gray-800 text-white "}
-                  text-gray-700  hover:bg-gray-800 hover:text-white px-3 py-2 rounded-md  font-medium`}
-              >
-                Large Projects
-              </a>
-              <Link
-                to="/students_projects"
-                className="text-gray-700 hover:bg-gray-800 hover:text-white px-3 py-2 rounded-md  font-medium"
-              >
-                Student's Projects
-              </Link>
+            {/* <div className="text-5xl uppercase tracking-widest font-bold text-gray-700"> Projects </div> */}
+
+            <div className="text-5xl uppercase tracking-widest font-bold text-gray-700">
+            <AnimateCharacter text={['P','R','O','J','E','C','T','S']} delay={1} duration={0.3} stagger={0.15} />
+            </div>
+            
             </div>
           </div>
           <div className="-mr-2 flex md:hidden">

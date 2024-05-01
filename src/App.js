@@ -12,6 +12,8 @@ import StudentsProject from "./Pages/StudentsProject";
 import SideBar from "./components/SideBar";
 import MainContent from "./Pages/MainContent";
 import ProjectCard from "./projectList/ProjectCard";
+import AnimatedDropdown from "./projects/anomated_dropdown/AnimatedDropdown";
+import ListOfItems from "./projects/list_of_items/ListOfItems";
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
             <Route path="/" element={BmiCalculator} />
             <Route path="/bmicalculator" element={<BmiCalculator/>} />
             <Route path="/todo" element={<TodoApp/>} />
+            <Route path="/animated_dropdown" element={<AnimatedDropdown/>} />
+            <Route path="/list_of_items" element={<ListOfItems/>} />
             <Route path="/:id" element={<ProjectCard/>}/>
             {/* Add more routes as needed */}
          </Routes>

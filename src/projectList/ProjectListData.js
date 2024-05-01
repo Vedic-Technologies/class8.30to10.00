@@ -25,7 +25,7 @@
         id: 3,
         title: "Todo ",
         difficulty_level:"Intermediate",
-        image: "https://www.freecodecamp.org/news/content/images/size/w2000/2020/07/cover-1.png",
+        image: "https://img.freepik.com/free-photo/notebook-with-pencils-hearts-white-background-3d-illustration_1057-45757.jpg?t=st=1714590881~exp=1714594481~hmac=3171171a9dbd11c5ced1d5350c1b283d868a559018d3376e9db80fc48a7dc379&w=826",
         detail: "A Todo application where users can create, read, update, and delete todoes.",
         languagesUsed: ["HTML", "CSS", "JavaScript", "React", "Node.js", "Express", "MongoDB"],
         url:"/todo",
@@ -37,7 +37,7 @@
         id: 4,
         title: "ShowPasswordIcon ",
         difficulty_level: "Beginner",
-        image: "https://www.csestack.org/wp-content/uploads/2021/02/password-show-hide-for-login-form.png",
+        image: "https://img.freepik.com/free-photo/view-3d-cinema-theatre-room_23-2151069460.jpg?t=st=1714590790~exp=1714594390~hmac=b2904039f8d00c2a5e6152ef390f47c45c0fed2406844e6d54223766e7e59319&w=826",
         detail: "A ShowPasswordIcon application where users can see password by clicking  show password icon",
         languagesUsed: ["HTML", "CSS", "JavaScript", "React", "Node.js", "Express", "MongoDB"],
         url:"/show_password_icon",
@@ -49,7 +49,7 @@
         id: 5,
         title: "Ecommerce ",
         difficulty_level: "Advance",
-        image: "https://www.csestack.org/wp-content/uploads/2021/02/password-show-hide-for-login-form.png",
+        image: "https://img.freepik.com/free-vector/online-shopping-banner-mobile-app-templates-concept-flat-design_1150-34862.jpg?t=st=1714590510~exp=1714594110~hmac=c74c36bb398778d3fe84dfdd628f1328688e9d07b2dbd6248a6629cd72056ecf&w=826",
         detail: "A ShowPasswordIcon application where users can see password by clicking  show password icon",
         languagesUsed: ["HTML", "CSS", "JavaScript", "React", "Node.js", "Express", "MongoDB"],
         url:"/show_password_icon",
@@ -57,15 +57,26 @@
         icon:<i class="fa-solid fa-store"></i>
       },
       {
-        id: 5,
+        id: 6,
         title: "List of items ",
         difficulty_level: "Beginner",
-        image: "https://www.csestack.org/wp-content/uploads/2021/02/password-show-hide-for-login-form.png",
-        detail: "A ShowPasswordIcon application where users can see password by clicking  show password icon",
-        languagesUsed: ["HTML", "CSS", "JavaScript", "React", "Node.js", "Express", "MongoDB"],
-        url:"/show_password_icon",
+        image: "https://img.freepik.com/free-photo/3d-render-todo-check-list-with-ticks-task-test_107791-15401.jpg?t=st=1714590241~exp=1714593841~hmac=bbe26f56745b1256063d21585b36319ac33b4e7ec8f5bc6376448467bfb06a37&w=996",
+        detail: "Here there is a list in which user can select multiple items and store under cart, also he can remove items from cart",
+        languagesUsed: ["HTML", "Tailwind", "JavaScript", "React", "Framer-Motion"],
+        url:"/list_of_items",
         createdBy:"Abhinav Sir",
         icon:<i class="fa-solid fa-bars-staggered"></i>
+      },
+      {
+        id: 7,
+        title: "Animated Drop Down ",
+        difficulty_level: "Beginner",
+        image: "https://i.ibb.co/TPpxySh/dropdown.png",
+        detail: "Its an animated dropdown with stunning visual effecect created by framer-motion",
+        languagesUsed: ["HTML", "Tailwind", "JavaScript", "React", "Framer Motion"],
+        url:"/animated_dropdown",
+        createdBy:"Abhinav Sir",
+        icon:<i class="fa-solid fa-circle-chevron-down"></i>
       },
     
 
