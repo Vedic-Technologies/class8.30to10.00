@@ -48,7 +48,7 @@
       {
         id: 5,
         title: "Ecommerce ",
-        difficulty_level: "Advance",
+        difficulty_level: "Advanced",
         image: "https://img.freepik.com/free-vector/online-shopping-banner-mobile-app-templates-concept-flat-design_1150-34862.jpg?t=st=1714590510~exp=1714594110~hmac=c74c36bb398778d3fe84dfdd628f1328688e9d07b2dbd6248a6629cd72056ecf&w=826",
         detail: "A ShowPasswordIcon application where users can see password by clicking  show password icon",
         languagesUsed: ["HTML", "CSS", "JavaScript", "React", "Node.js", "Express", "MongoDB"],

@@ -25,9 +25,14 @@ function App() {
         <SideBar />
         <MainContent>
         <Routes>
-            <Route path="/" element={BmiCalculator} />
+        <Route path="/" element={<Home />} />
+            <Route path="/calculator" element={<BmiCalculator />} />
             <Route path="/bmicalculator" element={<BmiCalculator/>} />
-            <Route path="/todo" element={<TodoApp/>} />
+            <Route path="/show_password_icon" element={<ShowPasswordIcon />} />
+            <Route path="/todo/*" element={<TodoApp/>} />
+            <Route path="/small_todo_app" element={<SmallTodoApp />} />
+            <Route path="/students_projects" element={<StudentsProject />} />
+            <Route path="/responsive_navbar" element={<ResponsiveNavbar />} />
             <Route path="/animated_dropdown" element={<AnimatedDropdown/>} />
             <Route path="/list_of_items" element={<ListOfItems/>} />
             <Route path="/:id" element={<ProjectCard/>}/>
@@ -35,18 +40,6 @@ function App() {
          </Routes>
         </MainContent>
       </div>
-
-
-
-        {/* <Route path="/" element={<Home />} />
-        <Route path="/calculator" element={<BmiCalculator />} />
-        <Route path="/bmicalculator" element={<BmiCalculator />} />
-        <Route path="/todo/*" element={<TodoApp />} />
-        <Route path="/show_password_icon" element={<ShowPasswordIcon />} />
-        <Route path="/small_todo_app" element={<SmallTodoApp />} />
-        <Route path="/responsive_navbar" element={<ResponsiveNavbar />} />
-        <Route path="/students_projects" element={<StudentsProject />} /> */}
-
      
     </div>
   );
