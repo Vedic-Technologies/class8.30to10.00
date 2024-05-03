@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import projectList from "../projectList/ProjectListData";
 import Projects from "./Projects";
 
 const SideBar = () => {

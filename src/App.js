@@ -14,6 +14,7 @@ import MainContent from "./Pages/MainContent";
 import ProjectCard from "./projectList/ProjectCard";
 import AnimatedDropdown from "./projects/anomated_dropdown/AnimatedDropdown";
 import ListOfItems from "./projects/list_of_items/ListOfItems";
+import Tabs from "./projects/tabs/Tabs";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
             <Route path="/responsive_navbar" element={<ResponsiveNavbar />} />
             <Route path="/animated_dropdown" element={<AnimatedDropdown/>} />
             <Route path="/list_of_items" element={<ListOfItems/>} />
+            <Route path="/tabs" element={<Tabs/>} />
             <Route path="/:id" element={<ProjectCard/>}/>
             {/* Add more routes as needed */}
          </Routes>

@@ -78,6 +78,17 @@
         createdBy:"Abhinav Sir",
         icon:<i class="fa-solid fa-circle-chevron-down"></i>
       },
+      {
+        id: 8,
+        title: "Tabs Component ",
+        difficulty_level: "Beginner",
+        image: "https://img.freepik.com/free-photo/3d-fantasy-scene_23-2151128031.jpg?t=st=1714676287~exp=1714679887~hmac=5f6bcbf01af9cb8379efa24e4d4041b958221771c47b5dc462a9843070c17346&w=826",
+        detail: "A regular tab component with stunning graphics created by framer motion",
+        languagesUsed: ["HTML", "Tailwind", "JavaScript", "React", "Framer Motion"],
+        url:"/tabs",
+        createdBy:"Abhinav Sir",
+        icon:<i class="fa-solid fa-layer-group"></i>
+      },
     
 
 ]
