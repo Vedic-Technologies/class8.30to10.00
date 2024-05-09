@@ -22,7 +22,7 @@ const [activeTab, setActiveTab] = useState(0);
   };
 
   return (
-    <div className='h-screen w-screen center'>
+    <div className='h-screen  center'>
          <div className="flex flex-col">
               <div className="flex border-b border-gray-200">
                 {tabs.map((tab, index) => (

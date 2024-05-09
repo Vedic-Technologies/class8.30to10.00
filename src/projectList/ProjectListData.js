@@ -89,6 +89,28 @@
         createdBy:"Abhinav Sir",
         icon:<i class="fa-solid fa-layer-group"></i>
       },
+      {
+        id: 9,
+        title: "Image Slider ",
+        difficulty_level: "Beginner",
+        image: "https://img.freepik.com/free-photo/beautiful-butterfly-nature_23-2150765811.jpg?t=st=1715217318~exp=1715220918~hmac=6cf19dbe53e10e39710aaf3b53558e0e063295628fb7763e124be93cdba25768&w=1380",
+        detail: "An Image Slider that show sliding images by clicking on next and previous buttons",
+        languagesUsed: ["HTML", "Tailwind", "JavaScript", "React", "Framer Motion"],
+        url:"/image_slider",
+        createdBy:"Abhinav Sir",
+        icon:<i class="fa-solid fa-images"></i>
+      },
+      {
+        id: 10,
+        title: "Weather App",
+        difficulty_level: "Intermediate",
+        image: "https://img.freepik.com/free-psd/weather-background-with-clouds_23-2150374535.jpg?t=st=1715216658~exp=1715220258~hmac=1ee20a7babd154150fe4a6758828d4b5199eedbb1bb796066b8d7177ff192ec8&w=1380",
+        detail: "An Weather App to search and display weather of different cities across of the world using weather API",
+        languagesUsed: ["HTML", "Tailwind", "JavaScript", "React", "Framer Motion"],
+        url:"/weather_app",
+        createdBy:"Abhinav Sir",
+        icon:<i class="fa-solid fa-cloud-sun-rain"></i>
+      },
     
 
 ]

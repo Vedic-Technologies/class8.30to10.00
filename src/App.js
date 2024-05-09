@@ -15,6 +15,8 @@ import ProjectCard from "./projectList/ProjectCard";
 import AnimatedDropdown from "./projects/anomated_dropdown/AnimatedDropdown";
 import ListOfItems from "./projects/list_of_items/ListOfItems";
 import Tabs from "./projects/tabs/Tabs";
+import ImageSlider from "./projects/image_slider/ImageSlider";
+import WeatherApp from "./projects/weather_app/WeatherApp";
 
 function App() {
   return (
@@ -37,6 +39,8 @@ function App() {
             <Route path="/animated_dropdown" element={<AnimatedDropdown/>} />
             <Route path="/list_of_items" element={<ListOfItems/>} />
             <Route path="/tabs" element={<Tabs/>} />
+            <Route path="/image_slider" element={<ImageSlider/>} />
+            <Route path="/weather_app" element={<WeatherApp/>} />            
             <Route path="/:id" element={<ProjectCard/>}/>
             {/* Add more routes as needed */}
          </Routes>
