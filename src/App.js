@@ -17,6 +17,8 @@ import ListOfItems from "./projects/list_of_items/ListOfItems";
 import Tabs from "./projects/tabs/Tabs";
 import ImageSlider from "./projects/image_slider/ImageSlider";
 import WeatherApp from "./projects/weather_app/WeatherApp";
+import LoginPage from "./projects/login_page/LoginPage";
+import LoginHomePage from "./projects/login_page/LoginHomePage";
 
 function App() {
   return (
@@ -41,6 +43,8 @@ function App() {
             <Route path="/tabs" element={<Tabs/>} />
             <Route path="/image_slider" element={<ImageSlider/>} />
             <Route path="/weather_app" element={<WeatherApp/>} />            
+            <Route path="/login" element={<LoginPage/>} />            
+            <Route path="/login_home" element={<LoginHomePage/>} />            
             <Route path="/:id" element={<ProjectCard/>}/>
             {/* Add more routes as needed */}
          </Routes>

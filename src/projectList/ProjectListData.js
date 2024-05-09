@@ -111,6 +111,17 @@
         createdBy:"Abhinav Sir",
         icon:<i class="fa-solid fa-cloud-sun-rain"></i>
       },
+      {
+        id: 11,
+        title: "Login Page",
+        difficulty_level: "Beginner",
+        image: "https://img.freepik.com/free-vector/log-landing-page-web-design_23-2148281212.jpg?t=st=1715217639~exp=1715221239~hmac=4eed0378cfb8628bfef4ae2351295ea300f58a6c31893cacea053831dcdc466f&w=1380",
+        detail: "A login Page that validates login in client side and send to Landind page on successful login else gives error",
+        languagesUsed: ["HTML", "Tailwind", "JavaScript", "React", "Framer Motion"],
+        url:"/login",
+        createdBy:"Abhinav Sir",
+        icon:<i class="fa-solid fa-right-to-bracket"></i>
+      },
     
 
 ]
