@@ -9,7 +9,7 @@ const SideBar = () => {
   };
 
   return (
-    <div className="bg-gray-200 text-white w-[400px] h-full p-10 mt-10">
+    <div className="bg-gray-200 text-white w-[400px] h-full p-10 mt-10 hidden xl:block">
       <Projects difficultyLevel="Beginner" selectedItem={selectedItem} handleItemClick={handleItemClick} />
       <Projects difficultyLevel="Intermediate" selectedItem={selectedItem} handleItemClick={handleItemClick} />
       <Projects difficultyLevel="Advanced" selectedItem={selectedItem} handleItemClick={handleItemClick} />

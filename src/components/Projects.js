@@ -16,7 +16,7 @@ const Projects = ({ difficultyLevel, selectedItem, handleItemClick }) => {
             <Link to={`/${project.id}`} className="w-full" key={index}>
               <li
                 className={`flex text-lg items-center gap-3 py-1 px-2 w-full rounded-md cursor-pointer ${
-                  selectedItem === project.id ? "bg-blue-800 text-white" : ""
+                  selectedItem === project.id ? "bg-blue-800 text-white" : "hover:bg-blue-800 hover:text-white "
                 }`}
                 onClick={() => handleItemClick(project.id)}
               >

@@ -27,7 +27,7 @@ function App() {
 
      
       <div className="flex h-screen">
-        <SideBar />
+        <SideBar/>
         <MainContent>
         <Routes>
         <Route path="/" element={<Home />} />
