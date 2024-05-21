@@ -26,8 +26,8 @@ const ProjectCard = () => {
               className="xl:w-full lg:w-full w-full relative overflow-hidden h-[500px] rounded-2xl shadow-vedic-shadow"
             >
               <div className="flex flex-col  border border-gray-400 lg:h-full h-full rounded-2xl  lg:flex-row md:flex-col">
-                <div className="flex-1  m-3 border-2 rounded-xl">
-                  <img src={project.image} alt="" className="h-full w-full rounded-lg" />
+                <div className="flex-1  m-3 border-2 rounded-xl bg-red-500" style={{backgroundImage:`url(${project.image})`,backgroundSize:"cover"}}>
+                  {/* <img src={project.image} alt="" className="h-full w-auto rounded-lg" /> */}
                 </div>
 
                 <div className="flex-1 px-6 py-4">

@@ -19,6 +19,8 @@ import ImageSlider from "./projects/image_slider/ImageSlider";
 import WeatherApp from "./projects/weather_app/WeatherApp";
 import LoginPage from "./projects/login_page/LoginPage";
 import LoginHomePage from "./projects/login_page/LoginHomePage";
+import GridStructure from "./projects/grid_structure/GridStructure";
+import VedicAI from "./projects/vedic_AI/VedicAI";
 
 function App() {
   return (
@@ -45,6 +47,8 @@ function App() {
             <Route path="/weather_app" element={<WeatherApp/>} />            
             <Route path="/login" element={<LoginPage/>} />            
             <Route path="/login_home" element={<LoginHomePage/>} />            
+            <Route path="/grid_structure" element={<GridStructure/>} />            
+            <Route path="/vedic_AI" element={<VedicAI/>} />            
             <Route path="/:id" element={<ProjectCard/>}/>
             {/* Add more routes as needed */}
          </Routes>

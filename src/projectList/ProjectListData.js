@@ -122,6 +122,30 @@
         createdBy:"Abhinav Sir",
         icon:<i class="fa-solid fa-right-to-bracket"></i>
       },
+      {
+        id: 12,
+        title: "Grid Structure UI",
+        difficulty_level: "Beginner",
+        image: "https://i0.wp.com/css-tricks.com/wp-content/uploads/2022/05/s_A8CA686DA97A9B54A10BB8506B0F905A3FEF553C480B7AEBFFA08B417AE4ABF7_1642170540124_Untitled.png?resize=2048%2C1200&ssl=1",
+        detail: "A Grid structure practice makes you a strong UI developer",
+        languagesUsed: ["HTML", "Tailwind", "JavaScript", "React", "Framer Motion"],
+        url:"/grid_structure",
+        createdBy:"Abhinav Sir",
+        icon:<i class="fa-solid fa-grip"></i>
+      },
+
+      {
+        id: 13,
+        title: "Vedic AI",
+        difficulty_level: "Intermediate",
+        image: "https://img.freepik.com/free-photo/futuristic-new-year-s-eve-celebration_23-2151084717.jpg?t=st=1716332981~exp=1716336581~hmac=036eb9434d01af36955185cb565dce6fc5e5b80417f758e4209bd8dc3a0ced6a&w=826",
+        detail: "A Vedic AI created by Vedic Developers ",
+        languagesUsed: ["HTML", "Tailwind", "JavaScript", "React", "Framer Motion"],
+        url:"/vedic_AI",
+        createdBy:"Abhinav Sir",
+        icon:<i class="fa-solid fa-grip"></i>
+      },
+    
     
 
 ]
