@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import ReactMarkdown from "react-markdown";
-
+import OutputWindow from "./OutputWindow";
 
 function VedicAI() {
   const [question, setQuestion] = useState("");
@@ -36,31 +36,35 @@ console.log(response)
 
   return (
     <>
-      <div className="bg-white h-screen p-3">
-        <form
-          onSubmit={generateAnswer}
-          className="w-full md:w-2/3 m-auto text-center rounded bg-gray-50 py-2"
+      <div className="bg-blue-300 p-3">
+      <h1 className="text-5xl font-bold text-center mt-20 text-blue-800">Vedic AI <span ><i class="fa-solid fa-wand-magic-sparkles text-4xl text-pink-800"></i></span></h1> 
+        <form         
+          className="w-[80%] mt-5 m-auto text-center rounded  py-2 relative"
         >
-          <a href="https://github.com/Vishesh-Pandey/chat-ai" target="_blank">
-            <h1 className="text-3xl text-center">Chat AI</h1>
-          </a>
+          <i class="fa-solid fa-bullseye absolute right-16 cursor-pointer active:text-red-900 active:scale-95 select-none top-9 text-4xl text-red-700"
+            type="submit"
+            disabled={generatingAnswer}
+            onClick={generateAnswer}
+          ></i>    
           <textarea
             required
-            className="border rounded w-11/12 my-2 min-h-fit p-3"
+            className="border-2 border-gray-300 rounded-xl w-11/12 my-2 min-h-fit p-3"
             value={question}
             onChange={(e) => setQuestion(e.target.value)}
             placeholder="Ask anything"
           ></textarea>
-          <button
+          {/* <button
             type="submit"
             className="bg-blue-300 p-3 rounded-md hover:bg-blue-400 transition-all duration-300"
-            disabled={generatingAnswer}
+            
           >
             Generate answer
-          </button>
+          </button> */}
         </form>
-        <div className="w-full md:w-2/3 m-auto text-center rounded bg-gray-50 my-1">
-          <ReactMarkdown className="p-3">{answer}</ReactMarkdown>
+
+        <div className="w-[80%] m-auto text-center rounded-3xl bg-gray-100 my-1">
+          {/* <ReactMarkdown className="p-3">{answer}</ReactMarkdown> */}
+          <OutputWindow answer={answer}/>
         </div>
       </div>
     </>

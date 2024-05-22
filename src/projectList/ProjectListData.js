@@ -143,7 +143,7 @@
         languagesUsed: ["HTML", "Tailwind", "JavaScript", "React", "Framer Motion"],
         url:"/vedic_AI",
         createdBy:"Abhinav Sir",
-        icon:<i class="fa-solid fa-grip"></i>
+        icon:<i class="fa-solid fa-wand-magic-sparkles"></i>
       },
     
     
