@@ -1,6 +1,5 @@
 import { useState } from "react";
 import axios from "axios";
-import ReactMarkdown from "react-markdown";
 import OutputWindow from "./OutputWindow";
 
 function VedicAI() {
@@ -63,7 +62,7 @@ console.log(response)
         </form>
 
         <div className="w-[80%] m-auto text-center rounded-3xl bg-gray-100 my-1">
-          {/* <ReactMarkdown className="p-3">{answer}</ReactMarkdown> */}
+          {/* <ReactMarkdown className="p-3">{answer}</ReactMarkdown> */}       
           <OutputWindow answer={answer}/>
         </div>
       </div>

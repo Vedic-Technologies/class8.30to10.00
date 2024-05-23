@@ -1,82 +1,87 @@
-import React, { useState } from 'react';
-import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 
-const GridStructure = () => {
-  const [messages, setMessages] = useState([]);
-  const [input, setInput] = useState('');
-  const [error, setError] = useState(null);
-  const api_key = 'AIzaSyBBWE7Kfi77QHl-cD6tmy6hWm1fKvvC020';
+const CardComponent = () => {
+  const [name, setName] = useState('');
+  const [work, setWork] = useState('');
+  const [marks, setMarks] = useState('');
 
-  const sendMessage = async () => {
-    if (input.trim() === '') return;
+  const [user,setUser]=useState(null)
 
-    const newMessage = { sender: 'user', text: input };
-    setMessages([...messages, newMessage]);
-    setError(null);
+  const [items, setItems]=useState([]);
+  
+useEffect(()=>
+{
+const temp_items=localStorage.getItem('my_items');
+setItems(JSON.parse(temp_items))
+},[])
 
-    try {
-      const response = await axios.post(
-        'POST https://generativelanguage.googleapis.com/v1beta/models/Gemini1.0 Pro:generateContent',
-        {
-          model: 'Gemini1.0 Pro',
-          messages: [{ role: 'user', content: input }],
-        },
-        {
-          headers: {
-            'Content-Type': 'application/json',
-            Authorization: `Bearer ${api_key}`,
-          },
-        }
-      );
-
-      const botMessage = { sender: 'bot', text: response.data.choices[0].message.content };
-      setMessages([...messages, newMessage, botMessage]);
-    } catch (error) {
-      if (error.response && error.response.status === 429) {
-        setError('You have reached the rate limit. Please try again later.');
-      } else {
-        setError('An error occurred while sending the message.');
-      }
-      console.error('Error sending message:', error);
-    }
-
-    setInput('');
-  };
+const addCard=()=>
+  {
+    setItems([...items,{name:name,work:work,marks:marks}])
+console.log(items);
+localStorage.setItem('my_items',JSON.stringify([...items,{name:name,work:work,marks:marks}]))
+  
+  }
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
-      <div className="w-full max-w-lg p-4 bg-white rounded-lg shadow-md">
-        <div className="flex flex-col space-y-2 overflow-y-auto h-96 mb-4">
-          {messages.map((msg, index) => (
-            <div
-              key={index}
-              className={`p-2 rounded-lg ${
-                msg.sender === 'user' ? 'bg-blue-500 text-white self-end' : 'bg-gray-200 text-gray-900 self-start'
-              }`}
-            >
-              {msg.text}
-            </div>
-          ))}
-        </div>
-        <div className="flex">
-          <input
-            type="text"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            className="flex-1 p-2 border border-gray-300 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-            placeholder="Type a message..."
-          />
-          <button
-            onClick={sendMessage}
-            className="px-4 py-2 bg-blue-500 text-white rounded-r-lg hover:bg-blue-600"
-          >
-            Send
-          </button>
-        </div>
-        {error && <div className="mt-4 text-red-500">{error}</div>}
+    <div className="flex flex-col items-center mt-20">
+      <div className="w-72 bg-blue-200 rounded-xl p-10 mb-10">
+        <input 
+          type="text" 
+          name="name" 
+          value={name}
+          onChange={(e)=>setName(e.target.value)}
+          placeholder="Name"
+          className="mb-2 p-1 w-full"
+        />
+        <input 
+          type="text" 
+          name="work" 
+          value={work}
+          onChange={(e)=>setWork(e.target.value)}
+          placeholder="Work"
+          className="mb-2 p-1 w-full"
+        />
+        <input 
+          type="text" 
+          name="marks" 
+          value={marks}
+          onChange={(e)=>setMarks(e.target.value)}
+          placeholder="Marks"
+          className="mb-4 p-1 w-full"
+        />
+
+        <button className='bg-blue-700 text-white text-2xl mt-4 py-1 px-10 rounded-xl'
+        onClick={()=>addCard()}
+        >+</button>
       </div>
+
+      {/* card */}
+<div className="flex gap-10 flex-wrap">
+{items && (items.map((item)=>{
+  return(
+    
+    <div className="w-72 bg-white rounded-xl shadow-lg p-4 flex ">
+<div           
+  className="size-24 mr-4 uppercase rounded-md bg-blue-700 center text-white font-semibold text-7xl"
+><div>{item.name[0]}</div></div>
+<div>
+  <h2 className="text-3xl font-bold">{item.name}</h2>
+  <div className="text-lg tracking-widest ">{item.work}</div>
+  <p className="text-lg">{item.marks}</p>
+</div>
+</div>
+    
+  )
+})
+)
+}
+</div>    
+     
+
+     
     </div>
   );
-};
+}
 
-export default GridStructure;
+export default CardComponent;

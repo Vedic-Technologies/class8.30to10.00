@@ -6,4 +6,5 @@ const items = [
     { id: 5, title: "Push yourself, because no one else" },
     { id: 6, title: "Great things never come from comfort" }
   ];
+
 export default items;  
