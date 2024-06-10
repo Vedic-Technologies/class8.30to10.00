@@ -145,7 +145,17 @@
         createdBy:"Abhinav Sir",
         icon:<i class="fa-solid fa-wand-magic-sparkles"></i>
       },
-    
+      {
+        id: 14,
+        title: "Ecommerce",
+        difficulty_level: "Intermediate",
+        image: "https://static.toiimg.com/thumb/msid-109669014,width-1280,height-720,resizemode-4/109669014.jpg",
+        detail: "A Ecommerce project where user can apply filters to items in product ",
+        languagesUsed: ["HTML", "Tailwind", "JavaScript", "React", "Framer Motion"],
+        url:"/ecommerce_medium",
+        createdBy:"Abhinav Sir",
+        icon:<i class="fa-solid fa-indian-rupee-sign"></i>
+      },
     
 
 ]
